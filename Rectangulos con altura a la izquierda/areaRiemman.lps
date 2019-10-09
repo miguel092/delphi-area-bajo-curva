@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="11"/>
+    <BuildModes Active="Default"/>
+    <Units Count="11">
+      <Unit0>
+        <Filename Value="areaRiemman.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos Y="11"/>
+        <UsageCount Value="38"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="areariemman_principal.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="areaRiemman_principal"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="46"/>
+        <CursorPos X="69" Y="62"/>
+        <UsageCount Value="38"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="objetos.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Objetos"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="310"/>
+        <CursorPos X="71" Y="301"/>
+        <UsageCount Value="38"/>
+        <Bookmarks Count="3">
+          <Item0 Y="607" ID="1"/>
+          <Item1 X="2" Y="346" ID="2"/>
+          <Item2 Y="469" ID="3"/>
+        </Bookmarks>
+      </Unit2>
+      <Unit3>
+        <Filename Value="linea.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="13" Y="21"/>
+        <UsageCount Value="38"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="rectangulo.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="56"/>
+        <CursorPos X="27" Y="79"/>
+        <UsageCount Value="38"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="punto.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="99"/>
+        <CursorPos X="33" Y="112"/>
+        <UsageCount Value="38"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="plotreal.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="86"/>
+        <CursorPos X="35" Y="109"/>
+        <UsageCount Value="38"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="plotrectangulo.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="75"/>
+        <CursorPos X="25" Y="98"/>
+        <UsageCount Value="38"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="sumariemman.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="sumaRiemman"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="171"/>
+        <CursorPos X="30" Y="194"/>
+        <UsageCount Value="38"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="C:\lazarus\lcl\include\control.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2722"/>
+        <CursorPos Y="2734"/>
+        <UsageCount Value="10"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="..\..\..\..\..\..\..\..\Developer\lazarus\components\lazdebuggergdbmi\gdbmidebugger.pp"/>
+        <UnitName Value="GDBMIDebugger"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="10"/>
+      </Unit10>
+    </Units>
+    <General>
+      <ActiveWindowIndexAtStart Value="-1"/>
+    </General>
+    <JumpHistory HistoryIndex="-1"/>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes Count="0" ActiveMode="default"/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

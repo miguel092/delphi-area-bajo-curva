@@ -1,0 +1,171 @@
+﻿CLASE cl_sumaRiemman
+INICIO
+	ATRIBUTOS
+		limiteInferior: REAL
+		limiteSuperior: REAL
+		funcion: cl_plotreal
+		numeroRectangulos: ENTERO
+		areaRiemman: REAL
+		areaIntegral: REAL
+		error: REAL
+		rectangulo: cl_plotrectangulo  
+	 
+	MÉTODOS
+		MÉTODO cl_sumaRiemman(xorig, yorig:ENTERO; limInf, limSup, areaAnalitica:REAL; noRectangulos, prec:ENTERO; salida:IMAGEN) 
+		VARIABLES
+			numeroObjetos: ENTERO 
+		INICIO
+			limiteInferior ← limInf 
+			limiteSuperior ← limSup 
+			numeroRectangulos ← noRectangulos 
+			areaIntegral ← areaAnalitica 
+			numeroObjetos ← (limiteSuperior-limiteInferior)*prec + 1
+			funcion ← cl_plotreal.crear(numeroObjetos, xorig, yorig, salida, prec)
+			funcion.modelo(limiteInferior, limiteSuperior) 
+			rectangulo ← cl_plotrectangulo.crear(numeroRectangulos, xorig, yorig, 0, 0, 0, 0, salida, prec)
+		FIN MÉTODO cl_sumaRiemman
+		
+		MÉTODO setLimiteInferior(n: REAL) 
+		INICIO
+			limiteInferior ← n 
+		FIN MÉTODO setLimiteInferior
+
+		MÉTODO setLimiteSuperior(n: REAL) 
+		INICIO
+			limiteSuperior ← n 
+		FIN MÉTODO setLimiteSuperior
+
+		MÉTODO setFuncion(f: cl_plotREAL) 
+		INICIO
+			funcion ← f 
+		FIN MÉTODO setFuncion
+
+		MÉTODO setNumeroRectangulos(n: ENTERO) 
+		INICIO
+			numeroRectangulos ← n 
+		FIN MÉTODO setNumeroRectangulos
+
+		MÉTODO setAreaRiemman(n: REAL) 
+		INICIO
+			areaRiemman ← n 
+		FIN MÉTODO setAreaRiemman
+
+		MÉTODO setAreaIntegral(n: REAL) 
+		INICIO
+			areaIntegral ← n 
+		FIN MÉTODO setAreaIntegral
+
+		MÉTODO setError(n: REAL) 
+		INICIO
+			error ← n 
+		FIN MÉTODO setError
+	
+		MÉTODO setRectangulo(r: cl_plotrectangulo) 
+		INICIO
+			rectangulo ← r 
+		FIN MÉTODO setRectangulo
+
+		MÉTODO getLimiteInferior: REAL 
+		INICIO
+			Regresa limiteInferior 
+		FIN MÉTODO getLimiteInferior
+
+		MÉTODO getLimiteSuperior: REAL 
+		INICIO
+			Regresa limiteSuperior 
+		FIN MÉTODO getLimiteSuperior
+
+		MÉTODO getFuncion: cl_plotREAL 
+		INICIO
+			Regresa funcion 
+		FIN MÉTODO getFuncion
+
+		MÉTODO getNumeroRectangulos: ENTERO 
+		INICIO
+			Regresa numeroRectangulos 
+		FIN MÉTODO getNumeroRectangulos
+
+		MÉTODO getAreaRiemman: REAL 
+		INICIO
+			Regresa areaRiemman 
+		FIN MÉTODO getAreaRiemman
+
+		MÉTODO getAreaIntegral: REAL 
+		INICIO
+			Regresa areaIntegral 
+		FIN MÉTODO getAreaIntegral
+
+		MÉTODO getError: REAL 
+		INICIO
+			Regresa error 
+		FIN MÉTODO getError
+
+		MÉTODO getRectangulo: cl_plotrectangulo 
+		INICIO
+			Regresa rectangulo
+		FIN MÉTODO getRectangulo
+
+		MÉTODO  calcularArea: REAL 
+		VARIABLES
+			i, p, recFull, decimales: ENTERO 
+			base, fx, xInicio: REAL 	
+			linea: ARREGLO DE cl_linea
+			ladosRectangulo: ARREGLO[1..4, 1..numeroRectangulos] DE REAL 			
+		INICIO			
+			p ← rectangulo.getrectangulos.getlado1.getpuntoInicio.getprecision   
+			
+			EN CASO DE (p)
+			INICIO
+				Caso p = 1: 
+				INICIO
+					decimales ← 0 
+				FIN
+				
+				Caso p = 10: 
+				INICIO
+					decimales ← 1 
+				FIN
+				
+				Caso p = 100: 
+				INICIO
+					decimales ← 2 
+				FIN
+				
+				Caso P = 1000: 
+				INICIO
+					decimales ← 3
+				FIN
+			FIN CASO
+  
+			base ← (limiteSuperior-limiteInferior)/numeroRectangulos
+			recFull ← 1 
+			linea ← funcion.getlineas 
+
+			PARA i ← 1 Hasta 1+(limiteSuperior-limiteInferior)*p HACER  
+				xInicio ← linea[i].getpuntoInicio.getx    
+
+				SI ( REDONDEAR(xInicio, decimales) = REDONDEAR(limiteInferior+(base*recFull),decimales) ) ENTONCES						
+					fx ← linea[i].getpuntoInicio.gety       					
+					ladosRectangulo[1,recFull] ←  xInicio 
+					ladosRectangulo[2,recFull] ←  0 
+					ladosRectangulo[3,recFull] ←  xInicio + base
+					ladosRectangulo[4,recFull] ←  fx 
+					areaRiemman ← areaRiemman + (fx*base) 
+					recFull ← recFull + 1
+				FIN SI
+			FIN PARA
+			
+			rectangulo.setrectangulos(numeroRectangulos, ladosRectangulo) 
+			rectangulo.graficar
+			funcion.graficar
+			
+			Regresa areaRiemman 		
+		FIN MÉTODO calcularArea
+
+		MÉTODO calcularError: REAL 
+		INICIO
+			error ← |areaIntegral - areaRiemman| 
+			Regresa error
+		FIN MÉTODO calcularError
+		
+FIN CLASE cl_sumaRiemman

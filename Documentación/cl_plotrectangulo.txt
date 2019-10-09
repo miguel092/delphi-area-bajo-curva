@@ -1,0 +1,68 @@
+﻿CLASE cl_plotrectangulo
+INICIO
+	ATRIBUTOS
+		rectangulos: ARREGLO DE cl_rectangulo
+		superficie: IMAGEN
+
+	MÉTODOS
+		MÉTODO cl_plotrectangulo(numRec, xorig, yorig:ENTERO; xInicio, yInicio, xFin, yFin:REAL; salida:IMAGEN; p:ENTERO)		
+		INICIO	
+			superficie ← salida
+			PARA i ← 1 HASTA numRec HACER
+				rectangulos[i] ← cl_rectangulo.crear(xorig, yorig, xInicio, yInicio, xFin, yFin, p)
+			FIN PARA
+		FIN MÉTODO cl_plotRectangulo
+
+		MÉTODO setrectangulos(n, LadosR: ARREGLO [1..4,1..n] DE REAL)		
+		VARIABLES
+			i: ENTERO
+		INICIO
+		   	PARA i <- 1 HASTA n HACER
+				rectangulos[i].setlado1(LadosR[i,1], LadosR[i,2], LadosR[i,3], LadosR[i,4])
+				rectangulos[i].setlado2(LadosR[i,1], LadosR[i,2], LadosR[i,3], LadosR[i,4])
+				rectangulos[i].setlado3(LadosR[i,1], LadosR[i,2], LadosR[i,3], LadosR[i,4])
+				rectangulos[i].setlado4(LadosR[i,1], LadosR[i,2], LadosR[i,3], LadosR[i,4])
+			FIN PARA
+		FIN MÉTODO setrectangulos
+
+		MÉTODO setsuperficie(ima: IMAGEN)
+		INICIO
+			superficie ← ima
+		FIN MÉTODO setsuperficie
+
+		MÉTODO getrectangulos: ARREGLO DE cl_rectangulo
+		INICIO
+			Regresa rectangulos
+		FIN
+
+		MÉTODO getsuperficie: IMAGEN
+		INICIO
+			Regresa superficie
+		FIN MÉTODO getsuperficie	
+
+		MÉTODO graficar
+		VARIABLES
+			i: ENTERO
+			n: ENTERO
+			cy, cy, cx1, cy1: ENTERO
+			alto, ancho, xCero, yCero: ENTERO
+		INICIO
+			alto ← superficie.alto 
+			ancho ← superficie.ancho
+			xCero ← rectangulo[1].getlado1.getpuntoInicio.getxo
+			yCero ← rectangulo[1].getlado1.getpuntoInicio.getyo
+			
+			DibujaLinea(0, yCero, ancho, yCero)
+			DibujaLinea(xCero, 0, xCero, alto)	
+			
+			n ← Tamaño(rectangulos)	
+			
+			PARA i ← 1 HASTA n HACER
+				cx ← 
+				cy ←
+				cx1 ←
+				cy1 ←
+				DibujaRectangulo(cx,cy,cxq,cy1)
+			FIN PARA						
+		FIN MÉTODO graficar
+FIN CLASE cl_plotrectangulo

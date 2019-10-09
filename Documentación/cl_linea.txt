@@ -1,0 +1,37 @@
+CLASE cl_linea
+INICIO
+	ATRIBUTOS
+		puntoInicio: cl_puntoreal	
+		puntoFin: cl_puntoreal	
+
+	MÉTODOS
+		MÉTODO cl_linea(xorig, yorig:ENTERO; xInicio, yInicio, xFin, yFin:REAL; p:ENTERO)
+		INICIO
+			puntoInicio ← cl_puntoreal.crear(xInicio, yInicio, xorig, yorig, p);
+			puntoFin ← cl_puntoreal.crear(xFin, yFin, xorig, yorig, p);
+		FIN MÉTODO cl_linea
+		
+		MÉTODO setpuntoInicio(x, y:REAL)	
+		INICIO
+			puntoInicio.setx(x)
+			puntoInicio.sety(y)
+			puntoInicio.geotograf			
+		FIN MÉTODO setpuntoInicio
+	
+		MÉTODO setpuntoFin(x, y:REAL)	
+		INICIO
+			puntoFin.setx(x)
+			puntoFin.sety(y)
+			puntoFin.geotograf
+		FIN MÉTODO setpuntoFin
+	
+		MÉTODO getpuntoInicio: cl_puntoreal	
+		INICIO
+			Regresa puntoInicio
+		FIN MÉTODO getpuntoInicio
+	
+		MÉTODO getpuntoFin: cl_puntoreal	
+		INICIO
+			Regresa puntoFin
+		FIN MÉTODO getpuntoFin					
+FIN CLASE cl_linea

@@ -1,0 +1,61 @@
+﻿CLASE cl_rectangulo
+INICIO
+	ATRIBUTOS
+		lado1: cl_linea
+		lado2: cl_linea
+		lado3: cl_linea
+		lado4: cl_linea
+		
+	MÉTODOS
+		MÉTODO cl_rectangulo(xorig, yorig:ENTERO; xInicio, yInicio, xFin, yFin: REAL; p: ENTERO)		
+		INICIO			
+			lado1 ← cl_linea.crear(xorig, yorig, xInicio, yInicio, xFin, yInicio, p)			
+			lado2 ← cl_linea.crear(xorig, yorig, xFin, yInicio, xFin, yFin, p)			
+			lado3 ← cl_linea.crear(xorig, yorig, xFin, yFin, xInicio, yFin, p)
+			lado4 ← cl_linea.crear(xorig, yorig, xInicio, yFin, xInicio, yInicio, p)			
+		FIN MÉTODO cl_rectangulo
+		
+		MÉTODO setlado1(xInic, yInic, xFin, yFin: REAL)		
+		INICIO
+			lado1.setpuntoInicio(xInic, yInic)
+			lado1.setpuntoFin(xFin, yInic)
+		FIN MÉTODO setlado1
+		
+		MÉTODO setlado2(xInic, yInic, xFin, yFin: REAL)		
+		INICIO
+			lado2.setpuntoInicio(xInic, yInic)
+			lado2.setpuntoFin(xInic, yInic)
+		FIN MÉTODO setlado2
+		
+		MÉTODO setlado3(xInic, yInic, xFin, yFin: REAL)		
+		INICIO
+			lado3.setpuntoInicio(xFin, yFin)
+			lado3.setpuntoFin(xInic, yFin)
+		FIN MÉTODO setlado3
+		
+		MÉTODO setlado4(xInic, yInic, xFin, yFin: REAL)		
+		INICIO
+			lado4.setpuntoInicio(xInic, yFin)
+			lado4.setpuntoFin(xInic, yInic)
+		FIN MÉTODO setlado4
+		
+		MÉTODO getlado1: cl_linea
+		INICIO
+			Regresa lado1
+		FIN MÉTODO getlado1
+		
+		MÉTODO getlado2: cl_linea
+		INICIO
+			Regresa lado2
+		FIN MÉTODO getlado2
+		
+		MÉTODO getlado3: cl_linea
+		INICIO
+			Regresa lado3
+		FIN MÉTODO getlado3
+		
+		MÉTODO getlado4: cl_linea
+		INICIO
+			Regresa lado4
+		FIN MÉTODO getlado4			
+FIN CLASE cl_rectangulo

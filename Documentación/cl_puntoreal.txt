@@ -1,0 +1,89 @@
+CLASE cl_puntoReal
+INICIO
+	ATRIBUTOS
+		x: REAL
+		y: REAL
+		xo: ENTERO	
+		yo: ENTERO
+		xt: REAL
+		yt: REAL
+		precision: ENTERO
+	
+MÉTODOS
+				
+	MÉTODO setx(n: REAL)
+	INICIO
+		x ← n
+	FIN MÉTODO setx
+	
+	MÉTODO sety(n: REAL)
+	INICIO
+		y ← n
+	FIN MÉTODO sety
+	
+	MÉTODO setxo(n: ENTERO)
+	INICIO
+		xo ← n
+	FIN MÉTODO setxo
+	
+	MÉTODO setyo(n: ENTERO)
+	INICIO
+		yo ← n
+	FIN MÉTODO setyo
+	
+	MÉTODO setxt(n: REAL)
+	INICIO
+		xt ← n
+	FIN MÉTODO setxt
+	
+	MÉTODO setyt(n: REAL)
+	INICIO
+		yt ← n
+	FIN MÉTODO setyt
+	
+	MÉTODO getx: REAL
+	INICIO
+		Regresa x
+	FIN MÉTODO getx
+	
+	MÉTODO gety: REAL
+	INICIO
+		Regresa y
+	FIN MÉTODO getx
+	
+	MÉTODO getxo: ENTERO
+	INICIO
+		Regresa xo
+	FIN MÉTODO getxo
+	
+	MÉTODO getyo: ENTERO
+	INICIO
+		Regresa yo
+	FIN MÉTODO getx
+	
+	MÉTODO getxt: REAL
+	INICIO
+		Regresa x
+	FIN MÉTODO getxt
+	
+	MÉTODO getyt: REAL
+	INICIO
+		Regresa yt
+	FIN MÉTODO getyt
+	
+	MÉTODO greotograf	
+	INICIO
+		xt ← xo + (x * precision)
+		yt ← yo - (y * precision)
+	FIN MÉTODO greotograf
+
+	MÉTODO cl_punto(cx, cy: REAL; crx, cry, cprec: ENTERO)
+	INICIO
+		x ← cx
+		y ← cy
+		xo ← crx 
+		yo ← cry
+		precision ← cprec
+	FIN MÉTODO cl_punto
+	
+FIN CLASE cl_puntoReal

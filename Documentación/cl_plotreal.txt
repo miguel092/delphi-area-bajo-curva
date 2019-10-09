@@ -1,0 +1,86 @@
+CLASE cl_plotreal
+INICIO
+	ATRIBUTOS  
+		lineas: ARREGLO DE cl_linea
+		superficie: IMAGEN
+
+	MÉTODOS
+		MÉTODO cl_plotreal(n, xorig, yorig:ENTERO; salida:IMAGEN; p:ENTERO) 
+		VARIABLES
+			i: ENTERO
+		INICIO
+			superficie ← salida 			
+			PARA i ← 1 HASTA n HACER		
+				lineas ← cl_linea.crear(xorig, yorig, 0, 0, 0, 0, p)
+			FIN PARA
+		FIN MÉTODO cl_plotreal
+		
+		MÉTODO setlineas(n:ENTERO; ListaP: ARREGLO[1..4, 1..n] DE REAL)
+		VARIABLES
+			i: ENTERO
+		INICIO
+			PARA i←1 HASTA n HACER			
+				lineas[i].setpuntoInicio(ListaP[1,i], ListaP[2,i])
+				lineas[i].setpuntoFin(ListaP[3,i], ListaP[4,i])				
+			FIN PARA
+		FIN MÉTODO setlineas	
+
+		MÉTODO setsuperficie(ima: IMAGEN)
+		INICIO
+			superficie←ima
+		FIN MÉTODO setsuperficie
+
+		MÉTODO getpuntos: ARREGLO DE cl_puntoreal 
+		INICIO
+			Regresa puntos 
+		FIN MÉTODO getpuntos
+
+		MÉTODO getsuperficie: IMAGEN
+		INICIO
+			 Regresa superficie 
+		FIN MÉTODO getsuperficie
+
+		MÉTODO modelo(izq, der: REAL)
+			FUNCION f(n: REAL): REAL
+			INICIO
+				REGRESA <<expresion matemática>>
+			FIN FUNCION f
+
+		VARIABLES
+			i, c, p:ENTERO
+			vx: REAL		
+		INICIO
+			c ← 0
+			p ← lineas[1].getpuntoInicio.getprecision
+			
+			PARA i ← 1 HASTA 1+(der-izq)*p HACER
+				vx ← izq +(i-1)/prec
+				lineas[c].setpuntoInicio(vx, f(vx))
+				lineas[c].setpuntoFin((izq+(i)/p), f(izq+(i)/p))				
+				c ← c+1
+			FIN PARA
+		FIN MÉTODO modelo
+
+		MÉTODO graficar 
+		VARIABLES
+			i, n, alto, ancho, xCero, yCero: ENTERO
+			cx, cy, cx1, cy1: ENTERO 
+		INICIO
+			alto ← superficie.alto
+			ancho ← superficie.ancho
+			    
+			xCero ← lineas[1].getpuntoInicio.getxo 
+			yCero ← lineas[1].getpuntoInicio.getyo 		
+			
+			DibujaLinea(0, yCero, ancho, yCero) 
+			DibujaLinea(xCero, 0, xCero, alto) 
+			n ← Tamaño(puntos)
+			PARA i ← 1 HASTA n HACER 			   		
+				cx ← lineas[i].getpuntoInicio.getxt 
+				cy ← lineas[i].getpuntoInicio.getyt 
+				cx1 ← lineas[i].getpuntoFin.getxt 
+				cy1 ← lineas[i].getpuntoFin.getyt 
+				DibujaLinea(cx,cy, cx1, cy1)
+			FIN PARA
+		FIN MÉTODO graficar			
+FIN CLASE cl_plotreal

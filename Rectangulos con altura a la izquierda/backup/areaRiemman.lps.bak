@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="9"/>
+    <BuildModes Active="Default"/>
+    <Units Count="10">
+      <Unit0>
+        <Filename Value="areaRiemman.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="38"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="areariemman_principal.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="areaRiemman_principal"/>
+        <CursorPos X="42" Y="11"/>
+        <UsageCount Value="38"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="objetos.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Objetos"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="457"/>
+        <CursorPos X="42" Y="468"/>
+        <UsageCount Value="38"/>
+        <Bookmarks Count="3">
+          <Item0 Y="606" ID="1"/>
+          <Item1 X="2" Y="346" ID="2"/>
+          <Item2 Y="468" ID="3"/>
+        </Bookmarks>
+        <Loaded Value="True"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="linea.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="13" Y="21"/>
+        <UsageCount Value="38"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="rectangulo.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="56"/>
+        <CursorPos X="27" Y="79"/>
+        <UsageCount Value="38"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="punto.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="99"/>
+        <CursorPos X="33" Y="112"/>
+        <UsageCount Value="38"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="plotreal.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="86"/>
+        <CursorPos X="35" Y="109"/>
+        <UsageCount Value="38"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="plotrectangulo.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="75"/>
+        <CursorPos X="25" Y="98"/>
+        <UsageCount Value="38"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="sumariemman.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="sumaRiemman"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="171"/>
+        <CursorPos X="30" Y="194"/>
+        <UsageCount Value="38"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="C:\lazarus\lcl\include\control.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2722"/>
+        <CursorPos Y="2734"/>
+        <UsageCount Value="10"/>
+      </Unit9>
+    </Units>
+    <JumpHistory Count="20" HistoryIndex="19">
+      <Position1>
+        <Filename Value="areariemman_principal.pas"/>
+        <Caret Line="61" TopLine="43"/>
+      </Position1>
+      <Position2>
+        <Filename Value="areariemman_principal.pas"/>
+        <Caret Line="62" TopLine="44"/>
+      </Position2>
+      <Position3>
+        <Filename Value="areariemman_principal.pas"/>
+        <Caret Line="61" TopLine="43"/>
+      </Position3>
+      <Position4>
+        <Filename Value="areariemman_principal.pas"/>
+        <Caret Line="57" Column="32" TopLine="43"/>
+      </Position4>
+      <Position5>
+        <Filename Value="areariemman_principal.pas"/>
+        <Caret Line="56" Column="37" TopLine="43"/>
+      </Position5>
+      <Position6>
+        <Filename Value="areariemman_principal.pas"/>
+        <Caret Line="53" Column="60" TopLine="43"/>
+      </Position6>
+      <Position7>
+        <Filename Value="areariemman_principal.pas"/>
+        <Caret Line="57" TopLine="43"/>
+      </Position7>
+      <Position8>
+        <Filename Value="areariemman_principal.pas"/>
+        <Caret Line="57" TopLine="43"/>
+      </Position8>
+      <Position9>
+        <Filename Value="objetos.pas"/>
+        <Caret Line="645" Column="30" TopLine="620"/>
+      </Position9>
+      <Position10>
+        <Filename Value="objetos.pas"/>
+        <Caret Line="115" Column="5" TopLine="103"/>
+      </Position10>
+      <Position11>
+        <Filename Value="objetos.pas"/>
+        <Caret Line="242" Column="29" TopLine="226"/>
+      </Position11>
+      <Position12>
+        <Filename Value="objetos.pas"/>
+        <Caret Line="244" Column="37" TopLine="57"/>
+      </Position12>
+      <Position13>
+        <Filename Value="objetos.pas"/>
+        <Caret Line="55" Column="13" TopLine="38"/>
+      </Position13>
+      <Position14>
+        <Filename Value="objetos.pas"/>
+        <Caret Line="271" TopLine="258"/>
+      </Position14>
+      <Position15>
+        <Filename Value="objetos.pas"/>
+        <Caret Line="270" Column="79" TopLine="258"/>
+      </Position15>
+      <Position16>
+        <Filename Value="objetos.pas"/>
+        <Caret Line="343" Column="13" TopLine="330"/>
+      </Position16>
+      <Position17>
+        <Filename Value="objetos.pas"/>
+        <Caret Line="337" Column="61" TopLine="330"/>
+      </Position17>
+      <Position18>
+        <Filename Value="objetos.pas"/>
+        <Caret Line="625" Column="61" TopLine="603"/>
+      </Position18>
+      <Position19>
+        <Filename Value="objetos.pas"/>
+        <Caret Line="603" Column="33" TopLine="233"/>
+      </Position19>
+      <Position20>
+        <Filename Value="objetos.pas"/>
+        <Caret Line="345" Column="35" TopLine="336"/>
+      </Position20>
+    </JumpHistory>
+  </ProjectSession>
+</CONFIG>
